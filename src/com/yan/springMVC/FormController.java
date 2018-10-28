@@ -23,6 +23,7 @@ public class FormController {
 		return "formResult";
 	} 
 	
+	
 	// ===== METHOD 1: use the request.getParameter =====
 	
 	// define a controller that make used of request and model object 

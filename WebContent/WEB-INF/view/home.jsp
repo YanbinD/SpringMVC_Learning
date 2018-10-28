@@ -6,6 +6,9 @@
 
 <a href = "studentFrom/showForm"> Go to form </a>
 
+
+<br><br>
+<a href = "student/showForm"> Go to form </a>
 </body>
 
 </html>
