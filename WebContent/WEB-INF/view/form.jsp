@@ -6,7 +6,12 @@
 	</head>
 	
 	<body>
-		<form action="processForm" method="GET">
+		<form action="processFormUpper" method="GET">
+			<input type="text" name="studentName" placeHolder="student name"/> 
+			<input type="submit"/>
+		</form>
+		
+		<form action="processFormUpperAnnotation" method="GET">
 			<input type="text" name="studentName" placeHolder="student name"/> 
 			<input type="submit"/>
 		</form>
