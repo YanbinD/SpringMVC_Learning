@@ -2,7 +2,13 @@
 <!DOCTYPE html>
 
 <html>
-<head> <title> student form</title></head>
+<head> 
+	<title> student form</title>
+	<style> 
+		.error{color:red};
+	</style>
+		
+</head>
 
 
 <body>
@@ -12,7 +18,9 @@
 		<!-- path="property of the student class" , value is the attritube value   -->
 		first name <form:input path='firstName'/> 
 		<br><br>
-		last name <form:input path="lastName" />
+		<!-- ADDED validation -->
+		last name <form:input path='lastName'/>
+		<form:errors path="lastName" cssClass="error" />
 		<br><br>
 		
 	<!-- Dropdown list AREA -->

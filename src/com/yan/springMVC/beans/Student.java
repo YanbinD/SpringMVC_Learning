@@ -2,10 +2,19 @@ package com.yan.springMVC.beans;
 
 import java.util.ArrayList;
 
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+
+
 public class Student {
 	
 	private String firstName;
+	
+	// ===== ADDING VALIDATION =====
+	@NotNull(message="is required")
+	@Size(min=1,message="is required")
 	private String lastName;
+	
 	private String schoolYear;
 	private ArrayList<String> schoolYearOption;
 	private ArrayList<String> favoriteLanguageOptions;

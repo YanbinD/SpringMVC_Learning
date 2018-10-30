@@ -1,7 +1,10 @@
 package com.yan.springMVC;
 
+import javax.validation.Valid;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -29,11 +32,17 @@ public class StudentController {
 
 	// ===== USE the spring form tag =====
 	@RequestMapping("/processFormTag") 
-	public String processFormTag(@ModelAttribute("student") Student theStudent) {
+	public String processFormTag(@Valid@ModelAttribute("student") Student theStudent, BindingResult result) {
 		
-		System.out.println("the student is :" + theStudent.getFirstName() + " " + theStudent.getLastName());
+		// added for FORM Validation 
+		if (result.hasErrors()) {
+			return "student-form";
+		}
 		return "student-confirmation";
 	} 
+	
+	
+	
 	
 		
 }
