@@ -24,11 +24,14 @@
 		<br><br>
 		Language: 
 		
-		Java <form:radiobutton path="favLanguage" value="Java" />
+<%-- 		Java <form:radiobutton path="favLanguage" value="Java" />
 		C++ <form:radiobutton path="favLanguage" value="C++" />
 		Go <form:radiobutton path="favLanguage" value="Go" />
 		Rail <form:radiobutton path="favLanguage" value="Rail" />
-		Javascript <form:radiobutton path="favLanguage" value="Javascript" />
+		Javascript <form:radiobutton path="favLanguage" value="Javascript" /> 
+--%>
+	
+		 <form:radiobuttons path="favLanguage" items="${student.favoriteLanguageOptions}"/>
 		
 	</form:form> 
 </body>
