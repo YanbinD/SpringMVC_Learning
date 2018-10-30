@@ -1,43 +1,45 @@
 package com.yan.springMVC.beans;
 
-import java.util.LinkedHashMap;
+import java.util.ArrayList;
 
 public class Student {
 	
 	private String firstName;
 	private String lastName;
-	private String country;
-	private LinkedHashMap<String, String> countryOption;
-	private LinkedHashMap<String, String> favoriteLanguageOptions;
+	private String schoolYear;
+	private ArrayList<String> schoolYearOption;
+	private ArrayList<String> favoriteLanguageOptions;
 	private String favLanguage; 
+	private String [] operationSystem;
 	
-	
-	public LinkedHashMap<String, String> getFavoriteLanguageOptions() {
+	public ArrayList<String> getSchoolYearOption() {
+		return schoolYearOption;
+	}
+
+	public ArrayList<String> getFavoriteLanguageOptions() {
 		return favoriteLanguageOptions;
 	}
 
 	public Student() {
-		countryOption = new LinkedHashMap<>();
+		schoolYearOption = new ArrayList<>();
 		
-		countryOption.put("BR", "Brazil");
-		countryOption.put("US", "United States");
-		countryOption.put("CH", "China");
+		schoolYearOption.add("Freshman");
+		schoolYearOption.add("Sophomore");
+		schoolYearOption.add("Junior");
+		schoolYearOption.add("Senior");
+		schoolYearOption.add("Senior+");
+		schoolYearOption.add("Graduate");
 		
         // populate favorite language options
-        favoriteLanguageOptions = new LinkedHashMap<>();
+        favoriteLanguageOptions = new ArrayList<>();
 
         // parameter order: value, display label
-        favoriteLanguageOptions.put("Java", "Java");
-        favoriteLanguageOptions.put("JavaScript", "JavaScript#");
-        favoriteLanguageOptions.put("Go", "Go");
-        favoriteLanguageOptions.put("Ruby", "Ruby");        
-
-
+        favoriteLanguageOptions.add("Java");
+        favoriteLanguageOptions.add("JavaScript");
+        favoriteLanguageOptions.add("Go");
+        favoriteLanguageOptions.add("Ruby");        
 	}
 	
-	public LinkedHashMap<String, String> getCountryOption() {
-		return countryOption;
-	}
 
 
 	public String getFirstName() {
@@ -52,12 +54,7 @@ public class Student {
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
 	}
-	public String getCountry() {
-		return country;
-	}
-	public void setCountry(String country) {
-		this.country = country;
-	}
+
 
 	public String getFavLanguage() {
 		return favLanguage;
@@ -65,6 +62,22 @@ public class Student {
 
 	public void setFavLanguage(String favLanguage) {
 		this.favLanguage = favLanguage;
+	}
+
+	public String getSchoolYear() {
+		return schoolYear;
+	}
+
+	public void setSchoolYear(String schoolYear) {
+		this.schoolYear = schoolYear;
+	}
+
+	public String[] getOperationSystem() {
+		return operationSystem;
+	}
+
+	public void setOperationSystem(String [] operationSystem) {
+		this.operationSystem = operationSystem;
 	}
 	
 	
