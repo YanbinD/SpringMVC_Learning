@@ -8,7 +8,7 @@
 
 
 <br><br>
-<a href = "student/showForm"> Go to form </a>
+<a href = "student/showForm"> Go to student form </a>
 </body>
 
 </html>

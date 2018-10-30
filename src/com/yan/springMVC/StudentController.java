@@ -28,11 +28,10 @@ public class StudentController {
 	
 
 	// ===== USE the spring form tag =====
-	//define a controller method to process the form
-	// STEP 4 
 	@RequestMapping("/processFormTag") 
 	public String processFormTag(@ModelAttribute("student") Student theStudent) {
-		System.out.println("the student is :" + theStudent.getFirstName() + theStudent.getLastName());
+		
+		System.out.println("the student is :" + theStudent.getFirstName() + " " + theStudent.getLastName());
 		return "student-confirmation";
 	} 
 	
